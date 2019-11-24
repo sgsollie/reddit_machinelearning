@@ -3,6 +3,7 @@ from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
 from keras.layers import TimeDistributed
+from keras.layers import Activation
 import numpy as np
 import tensorflow
 
@@ -46,6 +47,7 @@ model.compile(loss="categorical_crossentropy", optimizer="rmsprop")
 
 # Train it with X
 BATCH_SIZE = 200
+GENERATE_LENGTH = 550
 nb_epoch = 0
 while True:
     print('\n\n')
