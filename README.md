@@ -23,6 +23,8 @@ Using the aforementioned blog post and various other resources, I was able to bu
 
 https://keras.io/examples/lstm_text_generation/
 
+https://github.com/pushshift/api
+
 https://chunml.github.io/ChunML.github.io/project/Creating-Text-Generator-Using-Recurrent-Neural-Network/
 
 https://www.tensorflow.org/tutorials/text/text_generation
