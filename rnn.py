@@ -13,9 +13,8 @@ VOCAB_SIZE = len(chars)
 ix_to_char = {ix:char for ix, char in enumerate(chars)}
 char_to_ix = {char:ix for ix, char in enumerate(chars)}
 
-# Sequence length is a rough mean average of the length of each comment in words.
-# Luckily, thanks to the api, each comment only uses one line.
-SEQ_LENGTH = 66
+# Length in chars of input sequence
+SEQ_LENGTH = 300
 
 X = np.zeros((len(data)//SEQ_LENGTH, SEQ_LENGTH, VOCAB_SIZE), dtype=int)
 y = np.zeros((len(data)//SEQ_LENGTH, SEQ_LENGTH, VOCAB_SIZE), dtype=int)
@@ -44,6 +43,7 @@ for i in range(LAYER_NUM - 1):
 model.add(TimeDistributed(Dense(VOCAB_SIZE)))
 model.add(Activation('softmax'))
 model.compile(loss="categorical_crossentropy", optimizer="rmsprop")
+#model.load_weights('checkpoint_300_epoch_30.hdf5') # Uncomment this to load in any previous weights
 
 def generate_text(model, length):
     ix = [np.random.randint(VOCAB_SIZE)]
@@ -58,7 +58,7 @@ def generate_text(model, length):
 
 # Train it with X
 BATCH_SIZE = 30
-GENERATE_LENGTH = 500
+GENERATE_LENGTH = 300
 nb_epoch = 0
 while True:
     print('\n\n')
