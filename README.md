@@ -17,6 +17,7 @@ The script then builds an LSTM model using keras and then trains it with the dat
 
 Using the aforementioned blog post and various other resources, I was able to build a machine learning model with multiple layers, train it with the reddit comment data and output some sample predicted comments.
 
+I've been running this script on an AWS EC2 instance optimized for GPU machine learning.
 
 
 ## Educational and other resources used
