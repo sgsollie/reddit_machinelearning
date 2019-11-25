@@ -19,7 +19,7 @@ Using the aforementioned blog post and various other resources, I was able to bu
 
 
 
-## Educational resources used
+## Educational and other resources used
 
 https://keras.io/examples/lstm_text_generation/
 
