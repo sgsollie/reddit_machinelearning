@@ -35,7 +35,7 @@ for i in range(0, len(data)//SEQ_LENGTH):
     y[i] = target_sequence
 
 # Build the Recurrent Nerual Network using keras
-HIDDEN_DIM = 700
+HIDDEN_DIM = 300
 LAYER_NUM = 3
 model = Sequential()
 model.add(LSTM(HIDDEN_DIM, input_shape=(None, VOCAB_SIZE), return_sequences=True))
@@ -44,18 +44,6 @@ for i in range(LAYER_NUM - 1):
 model.add(TimeDistributed(Dense(VOCAB_SIZE)))
 model.add(Activation('softmax'))
 model.compile(loss="categorical_crossentropy", optimizer="rmsprop")
-
-# Train it with X
-BATCH_SIZE = 200
-GENERATE_LENGTH = 550
-nb_epoch = 0
-while True:
-    print('\n\n')
-    model.fit(X, y, batch_size=BATCH_SIZE, verbose=1, nb_epoch=1)
-    nb_epoch += 1
-    generate_text(model, GENERATE_LENGTH)
-    if nb_epoch % 10 == 0:
-        model.save_weights('checkpoint_{}_epoch_{}.hdf5'.format(HIDDEN_DIM, nb_epoch))
 
 def generate_text(model, length):
     ix = [np.random.randint(VOCAB_SIZE)]
@@ -67,3 +55,15 @@ def generate_text(model, length):
         ix = np.argmax(model.predict(X[:, :i+1, :])[0], 1)
         y_char.append(ix_to_char[ix[-1]])
     return ('').join(y_char)
+
+# Train it with X
+BATCH_SIZE = 30
+GENERATE_LENGTH = 500
+nb_epoch = 0
+while True:
+    print('\n\n')
+    model.fit(X, y, batch_size=BATCH_SIZE, verbose=1, nb_epoch=1)
+    nb_epoch += 1
+    generate_text(model, GENERATE_LENGTH)
+    if nb_epoch % 10 == 0:
+        model.save_weights('checkpoint_{}_epoch_{}.hdf5'.format(HIDDEN_DIM, nb_epoch))
