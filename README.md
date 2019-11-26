@@ -50,7 +50,8 @@ The Dems are so fucking stupid.
 
 The Dems are so fucking stupid.
 
-The Dems are so fucking stupid.```
+The Dems are so fucking stupid.
+```
 
 
 ## Educational and other resources used
