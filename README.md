@@ -37,6 +37,21 @@ So the keyword I used on the api search in `data_pull.py` was 'Dems' I think per
 
 I left this running overnight and got around 120 epochs. Some of the example outputs are still giving me a lot of repeated words. As of writing I may go for 200 iterations and see what results we get!
 
+Around 140 epochs :'):
+```The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.
+
+The Dems are so fucking stupid.```
+
 
 ## Educational and other resources used
 
