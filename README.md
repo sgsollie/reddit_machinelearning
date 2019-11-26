@@ -4,6 +4,8 @@ This is a crude implementation of a recurrent neural network to generate comment
 
 I thought it would be amusing to train the network to become a politcial commentator based on explosive reddit comments from /r/The_Donald. This has proven to be a hilarious and slightly depressing exercise, nevertheless very educational!
 
+NOTE: For those of you that don't realise this nothing more than a bit of fun; Anything this model outputs is absolutely NOT representative of my political views. I am not even from the US.
+
 
 ## Components
 `data_pull.py` is a script I wrote to pull down some data to play with. We are using the pushshift api which allows us to query large amounts of reddit content, which gets served to us as json. We then parse the json to obtain the body of the comments & save them locally to a text file. - Line 30 and 34 contain sample queries to the pushshift api which will give us a bunch of reddit comments.
