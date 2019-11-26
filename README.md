@@ -20,6 +20,24 @@ Using the aforementioned blog post and various other resources, I was able to bu
 I've been running this script on an AWS EC2 instance optimized for GPU machine learning.
 
 
+## EXAMPLE OUTPUT:
+```
+Dems mentioned it to the point where they are trying to stand up to the complete opposite. They are the ones who are
+still stuck in the water and they will be a shit show of fighting against the country and they are all about the propaganda
+
+The country is a shit show of fighting the dems and their media and dems are so fucking stupid on the same thing and they are all about the same
+thing and the Dems are going to start a conservative in the country.  If they don't have to do is see how the Dems are the ones in the polls
+
+The Dems are the party of the politicians and they are also the only one who has to be a lot of people to the point of being a shit show.  They are all about the same thing
+```
+
+## Some analysis
+
+So the keyword I used on the api search in `data_pull.py` was 'Dems' I think perhaps just doing a raw query with no keywords might work better next time as the model picked up on this word an awful lot.. (though trump supporters do seem to like to complain about the democrats often)
+
+I left this running overnight and got around 120 epochs. Some of the example outputs are still giving me a lot of repeated words. As of writing I may go for 200 iterations and see what results we get!
+
+
 ## Educational and other resources used
 
 https://keras.io/examples/lstm_text_generation/
