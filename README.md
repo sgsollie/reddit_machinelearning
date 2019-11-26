@@ -13,7 +13,8 @@ NOTE: For those of you that don't realise this nothing more than a bit of fun; A
 `rnn.py` implements a recurrent neural network using keras, with tensorflow as the backend. It was mostly written using information from blog posts and keras/tensorflow documentation. Due to my limited understanding of machine learning I leaned heavily on the documenation here and there was one particular blog post from which I borrowed most of the implementation. 
 https://chunml.github.io/ChunML.github.io/project/Creating-Text-Generator-Using-Recurrent-Neural-Network/
 
-Firstly, the script takes in the data, builds a featureset of characters used in the data and indexes all of the characters used with numbers. My understaing as to why this is done is beacuase machine learning models are easier to train with numbers. The data is later converted back to text from the output layer. The Data is then split into sequences to allow the model to predict the next character after any given character.
+Firstly, the script takes in the data, builds a featureset of characters used in the data and indexes all of the characters used with numbers. My understaing as to why this is done is beacuase machine learning models are easier to train with numbers. The Data is then split into sequences to allow the model to predict the next character after any given character.
+Later, the data is converted back to text from the output layer.
 
 The script then builds an LSTM model using keras and then trains it with the datasets inputted. It then prints examples as it goes and saves the weights of the RNN every 10 epochs.
 
