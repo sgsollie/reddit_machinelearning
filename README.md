@@ -40,7 +40,7 @@ So the keyword I used on the api search in `data_pull.py` was 'Dems' I think per
 
 I left this running overnight and got around 120 epochs. Some of the example outputs are still giving me a lot of repeated words. As of writing I may go for 200 iterations and see what results we get!
 
-Around 140 epochs - Oh lord what have I done?!
+Around 150 epochs - Oh lord what have I done?!
 ```The Dems are so fucking stupid.
 
 The Dems are so fucking stupid.
@@ -51,10 +51,18 @@ The Dems are so fucking stupid.
 
 The Dems are so fucking stupid.
 
-The Dems are so fucking stupid.
+What was the same play by the Dems.  They are all saying the Dems will be self imposed to be a conservative back to that party who was a sham.  They don't want to be a sham and the Dems are the ones who are.
 
-The Dems are so fucking stupid.
+The Dems are all about the same things that they are trying to convince.
+
+They would have to say the same thing as a reason to be a little state and the Dems will still vote for her.
+
+It is a shit show for the Dems to come for the Dems to come forgetting the state of the party.  The Dems are going to change the rules and continues to come
+
+
 ```
+
+With more data, tweaking and compute time I can definitely see it generating more coherent answers. But as of now, not wanting to burn any more dollars on this ecercise, I am going to retire my EC2 GPU instance and perhaps lock the weights and model in a vault somewhere under the sea or something...
 
 
 ## Educational and other resources used
